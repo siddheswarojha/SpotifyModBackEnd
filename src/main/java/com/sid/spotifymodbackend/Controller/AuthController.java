@@ -21,4 +21,14 @@ public class AuthController {
         return authService.loginUser(login);
     }
 
+
+    @PostMapping("register/")
+    public String register(@RequestParam Map<String,String> user)
+    {
+        return authService.register(user);
+    }
+
+
+
+
 }
